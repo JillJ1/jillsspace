@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: 'Special Elite', 'Courier New', monospace;
+  background: #d9cba3;
+}
+#login-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #f7f1e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.login-box {
+  text-align: center;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #aaa;
+}
+.login-box input {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-family: inherit;
+  border: 1px solid #aaa;
+}
+.login-box button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  background: #e4d3ae;
+  border: none;
+  cursor: pointer;
+}
+.passport-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.passport-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 0;
+}
+.id-photo {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 6px;
+  z-index: 2;
+}
+.day-box {
+  position: absolute;
+  left: 25%;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.4rem;
+  border-radius: 5px;
+  z-index: 2;
+}
+.verse { top: 10%; }
+.word { top: 18%; }
+.stamps {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  z-index: 2;
+}
+.stamp {
+  width: 90px;
+  cursor: pointer;
+  position: absolute;
+}
+.tilt-left { transform: rotate(-5deg); }
+.tilt-right { transform: rotate(4deg); }
+.music-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paper-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+.music-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 2;
+  font-size: 0.95rem;
+}
+.record {
+  width: 60px;
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
