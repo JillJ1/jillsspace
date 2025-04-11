@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jill’s Passport Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen">
+    <div class="login-box">
+      <p>Enter Password</p>
+      <input type="password" id="passwordInput" placeholder="••••••••">
+      <button onclick="checkPassword()">Enter</button>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display:none;">
+    <div class="passport-container">
+      <img src="paa.PNG" class="passport-bg" alt="passport background" />
+
+      <!-- ID PHOTO -->
+      <a href="https://www.instagram.com/jilllchristina/" target="_blank">
+        <img src="pom.JPG" class="id-photo" alt="ID photo">
+      </a>
+
+      <!-- Verse & Word of the Day -->
+      <div class="day-box verse">Verse of the Day:<br><span>Loading verse...</span></div>
+      <div class="day-box word">Word of the Day:<br><span>Loading word...</span></div>
+
+      <!-- Stamps -->
+      <div class="stamps">
+        <img src="blog.png" class="stamp tilt-left" onclick="goTo('blog')" alt="Blog">
+        <img src="f.PNG" class="stamp tilt-right" onclick="goTo('favorites')" alt="Favorites">
+        <img src="am.PNG" class="stamp tilt-left" onclick="goTo('about')" alt="About Me">
+        <img src="l.PNG" class="stamp tilt-right" onclick="goTo('linkedin')" alt="LinkedIn">
+        <img src="ChatGPT Image Apr 10, 2025, 07_45_13 PM.png" class="stamp tilt-left" onclick="goTo('career')" alt="Career Journal">
+        <img src="ChatGPT Image Apr 10, 2025, 07_44_59 PM.png" class="stamp tilt-right" onclick="goTo('faith')" alt="Faith">
+      </div>
+
+      <!-- Music Bar -->
+      <div class="music-bar">
+        <img src="paper.png" class="paper-bg" alt="paper background">
+        <div class="music-content">
+          <img src="56cea359a1afa38d4c50600cff8ce572-removebg-preview (1).png" class="record" alt="record">
+          <span>Now Playing: <a href="https://embed.music.apple.com/us/playlist/cold-car-ride-on-a-tuesday/pl.u-ZmblxbmsVPmpNbm" target="_blank">My Playlist</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      if (password === "openSesame") {
+        document.getElementById("login-screen").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+      } else {
+        alert("Wrong password, try again!");
+      }
+    }
+
+    function goTo(section) {
+      alert("Navigating to " + section + " (coming soon!)");
+    }
+  </script>
+</body>
+</html>
